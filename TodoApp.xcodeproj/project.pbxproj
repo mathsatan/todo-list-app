@@ -14,6 +14,9 @@
 		50BE45EF2A97853600F9434A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BE45EE2A97853600F9434A /* Assets.xcassets */; };
 		50BE45F22A97853600F9434A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BE45F02A97853600F9434A /* LaunchScreen.storyboard */; };
 		50BE45FA2A978A5100F9434A /* TodoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE45F92A978A5100F9434A /* TodoDetailsViewController.swift */; };
+		50BE46062A97F66200F9434A /* TrafficLightsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE46032A97F66200F9434A /* TrafficLightsPresenter.swift */; };
+		50BE46072A97F66200F9434A /* TrafficLightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE46042A97F66200F9434A /* TrafficLightsView.swift */; };
+		50BE46082A97F66200F9434A /* TrafficLightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE46052A97F66200F9434A /* TrafficLightsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		50BE45F12A97853600F9434A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50BE45F32A97853600F9434A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50BE45F92A978A5100F9434A /* TodoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailsViewController.swift; sourceTree = "<group>"; };
+		50BE46032A97F66200F9434A /* TrafficLightsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficLightsPresenter.swift; sourceTree = "<group>"; };
+		50BE46042A97F66200F9434A /* TrafficLightsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficLightsView.swift; sourceTree = "<group>"; };
+		50BE46052A97F66200F9434A /* TrafficLightsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficLightsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		50BE45E42A97853400F9434A /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				50BE46022A97F66200F9434A /* TrafficLights */,
 				50BE45E52A97853400F9434A /* AppDelegate.swift */,
 				50BE45E72A97853400F9434A /* SceneDelegate.swift */,
 				50BE45E92A97853400F9434A /* ViewController.swift */,
@@ -68,6 +75,16 @@
 				50BE45F32A97853600F9434A /* Info.plist */,
 			);
 			path = TodoApp;
+			sourceTree = "<group>";
+		};
+		50BE46022A97F66200F9434A /* TrafficLights */ = {
+			isa = PBXGroup;
+			children = (
+				50BE46032A97F66200F9434A /* TrafficLightsPresenter.swift */,
+				50BE46042A97F66200F9434A /* TrafficLightsView.swift */,
+				50BE46052A97F66200F9434A /* TrafficLightsViewController.swift */,
+			);
+			path = TrafficLights;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +162,9 @@
 				50BE45FA2A978A5100F9434A /* TodoDetailsViewController.swift in Sources */,
 				50BE45E62A97853400F9434A /* AppDelegate.swift in Sources */,
 				50BE45E82A97853400F9434A /* SceneDelegate.swift in Sources */,
+				50BE46062A97F66200F9434A /* TrafficLightsPresenter.swift in Sources */,
+				50BE46082A97F66200F9434A /* TrafficLightsViewController.swift in Sources */,
+				50BE46072A97F66200F9434A /* TrafficLightsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

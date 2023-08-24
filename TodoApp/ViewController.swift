@@ -14,16 +14,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let data: [String] = ["todo 1", "todo 2", "todo 3"]
     
-    @IBAction func buttonAction(_ sender: UIButton) {
-        print("did tap!")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        button.backgroundColor = .brown
-        view.backgroundColor = .gray
-        print("custom viewcontroller")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -50,7 +42,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentIndex = indexPath.item
-        print("number \(currentIndex)")
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         guard let detailsViewController = storyboard.instantiateViewController(withIdentifier: "TodoDetailsViewController") as? TodoDetailsViewController else {
             return
@@ -61,3 +52,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 }
 
+// MARK: - Actions
+
+private extension ViewController {
+    
+    @IBAction func buttonAction(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        guard let trafficLightsViewController = storyboard.instantiateViewController(withIdentifier: "TrafficLightsViewController") as? TrafficLightsViewController else {
+            return
+        }
+        let presenter = TrafficLightsPresenter()
+        presenter.view = trafficLightsViewController
+        trafficLightsViewController.presenter = presenter
+        self.present(trafficLightsViewController, animated: true)
+    }
+}
