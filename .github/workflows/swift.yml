@@ -1,0 +1,21 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Kubik
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      run: echo "Hello!"
+    - name: Send message
+      run: |
+        phrases=("Meow!" "I'm hungry" "Hey! Kubik is there" "Meeeeeoow!" "Hello there!")
+        msg_text=${phrases[ $RANDOM % ${#phrases[@]} ]}  
+        curl -s -X POST "https://api.telegram.org/bot6381873068:AAFJwDneA05GmIJarblAF9pHG9XgvB5MmJ4/sendMessage" \
+        -d "chat_id=-1002125976467&text=${msg_text}&disable_notification=true"
